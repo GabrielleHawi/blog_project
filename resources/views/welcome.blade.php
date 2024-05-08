@@ -103,13 +103,16 @@
          
             <!-- Intro left -->
             <div class="tm-section-col tm-content">
-                @if(Session::has('message'))
+                            @if(Session::has('message'))
                             <span style="background-color: lightgreen;">
                                 {{Session::get('message') }}
                             </span>@endif
+
                             <br>
                             <br>
+                            {{--blog function starts--}}
                             @if(\App\Models\Posts::count('id') > 0)
+                            
                             @foreach(\App\Models\Posts::get() as $post)
                             <div class="tm-media">
                             
@@ -135,6 +138,7 @@
                             @else
                             <h4 class="tm-text-primary"> No posts yet please add!!</h4>
                             @endif
+                            {{--blog function ends--}} 
                             
                            
                 <div class="tm-text-right">
