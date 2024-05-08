@@ -9,6 +9,7 @@ class Posts extends Model
 {
     use HasFactory;
     protected $fillable =[
+        #table columns as defined
         'title','textarea','likes'
     ];
 
