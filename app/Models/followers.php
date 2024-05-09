@@ -10,6 +10,7 @@ class followers extends Model
     use HasFactory;
 
     protected $fillable =[
+        #defination of table column
         'count'
     ];
 }

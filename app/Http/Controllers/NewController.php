@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Session;
 class NewController extends Controller
 {
     //
+
+    #function for addition of follower when button is clicked
     public function index(Request $request){
     
        $counter = followers::firstOrNew(['count' => 1]);
@@ -58,7 +60,6 @@ public function post_blogall(){
 }
 public function delete($id) {
     #this function is based on the id of the specifc item one wants to delete from the database
-    #its good practice to have validation or error catch functions 
     #if($id is empty ){
      # the id is not available
    # }else
